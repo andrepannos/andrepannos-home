@@ -461,6 +461,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .service-card:nth-child(3) {
+    order: -1;
+  }
+
   .testimonials-masonry {
     columns: 1;
   }
