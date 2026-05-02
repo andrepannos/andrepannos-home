@@ -432,12 +432,26 @@ img {
   }
 
   .hero-right {
-    margin-top: 20px;
+    margin-top: 0;
   }
+
+  .hero-left,
+  .hero-right {
+    display: contents;
+  }
+
+  .hero-content .logo { order: 1; margin-bottom: 12px; }
+  .hero-content .hero-description { order: 2; margin-bottom: 12px; }
+  .hero-content .hero-video { order: 3; margin: 0 0 12px; }
+  .hero-content .btn-primary { order: 4; }
 
 }
 
 @media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+
   .section-title {
     font-size: 1.4rem;
   }
