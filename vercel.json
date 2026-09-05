@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/nix",
+      "destination": "/nix/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/nix/",
+      "destination": "https://nixstudio.vercel.app/nix/"
+    },
+    {
+      "source": "/nix/:path*",
+      "destination": "https://nixstudio.vercel.app/nix/:path*"
+    }
+  ]
+}
