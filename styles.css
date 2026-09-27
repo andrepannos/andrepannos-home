@@ -110,9 +110,11 @@ img {
   margin-bottom: 30px;
 }
 
-.logo-svg {
-  height: 144px;
-  width: auto;
+.hero-profile-image {
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .hero-description {
