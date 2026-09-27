@@ -1,4 +1,8 @@
 /* ===== RESET & BASE ===== */
+:root {
+  --page-bg: #0b0d14;
+}
+
 *,
 *::before,
 *::after {
@@ -9,11 +13,12 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--page-bg);
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #0a0a0a;
+  background-color: var(--page-bg);
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
@@ -86,7 +91,7 @@ img {
   display: flex;
   align-items: center;
   padding: 60px 0;
-  background: #0a0a0a;
+  background: var(--page-bg);
   overflow: hidden;
 }
 
@@ -155,7 +160,7 @@ img {
 /* ===== SERVICES SECTION ===== */
 .services {
   padding: 100px 0;
-  background: #0a0a0a;
+  background: var(--page-bg);
 }
 
 .section-title {
@@ -174,7 +179,7 @@ img {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -188,6 +193,10 @@ img {
   align-items: flex-start;
   transition: all 0.3s ease;
   overflow: hidden;
+}
+
+.service-card[hidden] {
+  display: none;
 }
 
 .service-image {
@@ -294,7 +303,7 @@ img {
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials {
   padding: 80px 0 100px;
-  background: #0a0a0a;
+  background: var(--page-bg);
 }
 
 .testimonials .section-title {
@@ -364,7 +373,7 @@ img {
 /* ===== FOOTER ===== */
 .footer {
   padding: 60px 0 100px;
-  background: #0a0a0a;
+  background: var(--page-bg);
   text-align: center;
 }
 
@@ -412,11 +421,24 @@ img {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 1025px) {
+  .logo {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
   }
 
+  .hero-profile-image {
+    transform: translateY(-99px);
+  }
+
+  .hero-description,
+  .hero-left > .btn-primary {
+    margin-left: 11px;
+  }
+}
+
+@media (max-width: 1024px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -450,6 +472,10 @@ img {
 }
 
 @media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hide-mobile {
     display: none;
   }
@@ -473,14 +499,6 @@ img {
 }
 
 @media (max-width: 576px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card:nth-child(4) {
-    order: -1;
-  }
-
   .testimonials-masonry {
     columns: 1;
   }
